@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #212121;
+    background-color: #516462;
+}
+#defaultLayout {
+    display: flex;
+}
+#defaultLayout .aside {
+    position: fixed;
+    height: 100%;
+    margin-top: 60px;
+}
+
+#defaultLayout .content {
+    margin-top: 65px;
+    margin-left: 290px;
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    background-color: #516462;
+}
+
+#defaultLayout main {
+    height: 100vh;
+    background-color: #516462;
+    border-style: solid;
+    border-width: 5px;
+    border-color: red;
+    overflow: scroll;
+    border-left: #516462;
+    border-top: #516462;
+}
+
+.container {
+    margin-top: 2rem;
+    width: fit-content;
+    height: 50vh;
+    position: absolute;
+    overflow: scroll;
+    background-color: aliceblue;
+}
+
+.userForm {
+    margin-top: 2rem;
+    width: 70%;
+    height: 50vh;
+    position: absolute;
+    background-color: aliceblue;
+}
+/* .cover {
+    width: fit-content;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+} */
+
+.text-center {
+    text-align: center;
+}
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+}
+
+
+.header {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem 3rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0) 1px,
+      var(--background) 1px
+    );
+    background-size: 4px 4px;
+    backdrop-filter: blur(3px);
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+/* Login/Signup forms*/
+.login-signup-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================================================== */
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 2rem;
+    background-color: #1f2726;
+    color: white;
+}
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
